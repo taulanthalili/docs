@@ -98,8 +98,10 @@ Ignore the self-signed certificate warning and click on **Advanced** and **Proce
 ### SSH Access
 
 With your previously created private key you can connect to the instance via SSH.
+First you need to change the permissions of the private key file to read only (400).
 
 ```bash
+chmod 400 path_to_your_private_key.pem
 ssh -i path_to_your_private_key.pem admin@yourElasticIpAddress
 ```
 
